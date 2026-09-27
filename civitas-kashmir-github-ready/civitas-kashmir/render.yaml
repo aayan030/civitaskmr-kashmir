@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: civitas-kashmir
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    numInstances: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_NAMES
+        value: Qazi Hazeem,Mir Muazzam,Ayaan
+      - key: DEPUTY_NAME
+        value: Deputy
+      - key: SESSION_SECRET
+        sync: false
+      - key: ADMIN_CODE
+        sync: false
+      - key: DEPUTY_CODE
+        sync: false
